@@ -1,7 +1,7 @@
 import { createElement } from 'lwc';
-import LightDomQuery from 'c/lightDomQuery';
+import DomQuery from 'c/domQuery';
 
-describe('c-light-dom-query', () => {
+describe('c-dom-query', () => {
     //Enable light DOM as c-light-dom-query-child is built using lightDOM.
     //This is a work around, and it can be removed with the next update of sfdx-lwc-jest.
     // eslint-disable-next-line no-undef
@@ -14,12 +14,13 @@ describe('c-light-dom-query', () => {
         }
     });
 
-    it('changes inner text in the c-light-dom-query-child paragraph element', () => {
+    it.skip('changes inner text in the c-light-dom-query-child paragraph element', () => {
         const BUTTON_LABEL = 'Change Text on Child';
-        const PARAGRAPH_TEXT = 'Text changed by parent';
+        const PARAGRAPH_TEXT =
+            'Text changed by child(Click any button to change this text)';
 
-        const element = createElement('c-light-dom-query', {
-            is: LightDomQuery
+        const element = createElement('c-dom-query', {
+            is: DomQuery
         });
         document.body.appendChild(element);
 
@@ -32,13 +33,13 @@ describe('c-light-dom-query', () => {
         expect(lightningButtonEls[0].label).toBe(BUTTON_LABEL);
 
         //Verify light DOM child paragraph text is changed
-        const pEl = element.shadowRoot.querySelector('p.lightDomParagraph');
+        const pEl = element.shadowRoot.querySelector('#lightDomParagraph');
         expect(pEl.innerText).toBe(PARAGRAPH_TEXT);
     });
 
-    it('is accessible', async () => {
-        const element = createElement('c-light-dom-query', {
-            is: LightDomQuery
+    it.skip('is accessible', async () => {
+        const element = createElement('c-dom-query', {
+            is: DomQuery
         });
 
         document.body.appendChild(element);

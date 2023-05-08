@@ -1,12 +1,13 @@
-c-light-dom-query-child {
+c-light-dom-container {
     border: solid var(--lwc-borderWidthThin, 1px) #ecebea;
     border-radius: var(--lwc-borderRadiusMedium, 4px);
-    padding: var(--lwc-squareIconXSmallContent, 0.5rem)
+    margin: var(--lwc-borderWidthThin, 1px) 0;
+    padding: 3px var(--lwc-varSpacingXxxSmall, 2px) 0
         var(--lwc-varSpacingXxxSmall, 2px);
 }
 
-c-light-dom-query-child:before {
-    content: 'c-light-dom-query-child';
+c-light-dom-container:before {
+    content: 'c-light-dom-container';
     color: rgb(221, 219, 218);
     position: absolute;
     top: -9px;

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="DomEvent" icon-name="custom:custom5">
+        <div class="slds-var-m-around_medium">
+            <p>event.currentTarget: {currentTarget}</p>
+            <p>event.target: {target}</p>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <c-light-dom-container
+                onbuttonclick={handleButtonClick}
+                class="slds-show slds-is-relative"
+            >
+            </c-light-dom-container>
+        </div>
+        <c-view-source source="lwc/domEvent" slot="footer">
+            Propogate Events from the Light DOM component.
+        </c-view-source>
+    </lightning-card>
+</template>

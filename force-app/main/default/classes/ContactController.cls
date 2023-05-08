@@ -40,6 +40,17 @@ public with sharing class ContactController {
         ];
     }
 
+    @AuraEnabled(cacheable=true)
+    public static Contact getLatestContact() {
+        return [
+            SELECT Id, Name, Title, Phone, Email, Picture__c
+            FROM Contact
+            WITH SECURITY_ENFORCED
+            ORDER BY CreatedDate DESC
+            LIMIT 1
+        ];
+    }
+
     @AuraEnabled
     public static void updateContacts(List<Contact> contactsForUpdate) {
         // Make sure we can update the database before trying to update

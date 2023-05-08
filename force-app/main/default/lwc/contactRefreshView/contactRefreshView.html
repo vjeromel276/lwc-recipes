@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="ContactRefreshView" icon-name="standard:contact">
+        <template lwc:if={contact.data}>
+            <div class="slds-var-m-around_medium">
+                <template lwc:if={picture}>
+                    <img src={picture} alt="Profile photo" />
+                </template>
+                <p>{name}</p>
+                <p>{title}</p>
+            </div>
+        </template>
+        <template lwc:elseif={contact.error}>
+            <c-error-panel errors={contact.error}></c-error-panel>
+        </template>
+        <c-view-source source="lwc/contactRefreshView" slot="footer">
+            Component registers a handler method to be invoked after a container
+            has received the RefreshEvent.
+        </c-view-source>
+    </lightning-card>
+</template>

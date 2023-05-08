@@ -3,14 +3,20 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>lightDomQuery</componentName>
-                <identifier>c_lightDomQuery</identifier>
+                <componentName>domQuery</componentName>
+                <identifier>c_DomQuery</identifier>
             </componentInstance>
         </itemInstances>
         <name>region1</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>domEvent</componentName>
+                <identifier>c_domEvent</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>region2</name>
         <type>Region</type>
     </flexiPageRegions>

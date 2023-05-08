@@ -1,5 +1,5 @@
 <template>
-    <lightning-card title="LightDomQuery" icon-name="custom:custom5">
+    <lightning-card title="DomQuery" icon-name="custom:custom5">
         <div class="slds-var-m-around_medium">
             <lightning-button
                 onclick={handleButtonClick}
@@ -8,13 +8,19 @@
         </div>
 
         <div class="slds-var-m-around_medium">
+            <c-shadow-dom-query-child
+                class="slds-show slds-is-relative"
+            ></c-shadow-dom-query-child>
+        </div>
+
+        <div class="slds-var-m-around_medium">
             <c-light-dom-query-child
                 class="slds-show slds-is-relative"
             ></c-light-dom-query-child>
         </div>
 
-        <c-view-source source="lwc/lightDomQuery" slot="footer">
-            Use query selectors access nodes inside a Light DOM component.
+        <c-view-source source="lwc/domQuery" slot="footer">
+            Use DOM APIs to access nodes inside a Light DOM component.
         </c-view-source>
     </lightning-card>
 </template>

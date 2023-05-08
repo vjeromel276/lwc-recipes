@@ -1,0 +1,14 @@
+<template lwc:render-mode="light">
+    <!-- c-light-dom-child host -->
+    <div class="slds-var-m-around_medium">
+        <p>event.currentTarget: {currentTarget}</p>
+        <p>event.target: {target}</p>
+    </div>
+    <div class="slds-var-m-around_medium">
+        <c-light-dom-child
+            onbuttonclick={handleButtonClick}
+            class="slds-show slds-is-relative"
+        >
+        </c-light-dom-child>
+    </div>
+</template>

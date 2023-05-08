@@ -1,0 +1,50 @@
+<template>
+    <lightning-card
+        title="DispatchContactRefreshEvent"
+        icon-name="standard:contact"
+    >
+        <div class="slds-var-m-around_medium">
+            <lightning-record-edit-form
+                object-api-name="Contact"
+                onsuccess={handleSuccess}
+            >
+                <lightning-messages></lightning-messages>
+                <lightning-input-field
+                    field-name={accountField}
+                    class="account"
+                ></lightning-input-field>
+                <lightning-input-field
+                    field-name={nameField}
+                    class="name"
+                ></lightning-input-field>
+                <lightning-input-field
+                    field-name={titleField}
+                    class="title"
+                ></lightning-input-field>
+                <lightning-input-field
+                    field-name={pictureField}
+                    class="Picture__c"
+                ></lightning-input-field>
+                <div class="slds-var-m-top_medium">
+                    <lightning-button
+                        variant="brand"
+                        type="submit"
+                        name="save"
+                        label="Save"
+                    ></lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+
+        <c-view-source source="lwc/dispatchContactRefreshEvent" slot="footer">
+            Refresh data in a view without reloading the page thanks to the
+            <a
+                href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.data_refreshview"
+                target="_blank"
+                noopener
+            >
+                Refresh API</a
+            >.
+        </c-view-source>
+    </lightning-card>
+</template>

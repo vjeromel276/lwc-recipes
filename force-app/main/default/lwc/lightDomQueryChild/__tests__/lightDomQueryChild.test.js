@@ -15,7 +15,8 @@ describe('c-light-dom-query-child', () => {
 
     it('changes inner text in the paragraph element', () => {
         const BUTTON_LABEL = 'Change Text';
-        const PARAGRAPH_TEXT = 'Text changed by child';
+        const PARAGRAPH_TEXT =
+            'Text changed by child(Click any button to change this text)';
 
         const element = createElement('c-light-dom-query-child', {
             is: LightDomQueryChild
@@ -30,7 +31,7 @@ describe('c-light-dom-query-child', () => {
         expect(lightningButtonEl.label).toBe(BUTTON_LABEL);
 
         //Verify light DOM paragraph text is changed
-        const pEl = element.querySelector('p.lightDomParagraph');
+        const pEl = element.querySelector('#lightDomParagraph');
         expect(pEl.innerText).toBe(PARAGRAPH_TEXT);
     });
 

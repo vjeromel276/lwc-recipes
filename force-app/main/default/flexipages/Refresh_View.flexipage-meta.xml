@@ -9,11 +9,11 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>entityName</name>
-                    <value>Account</value>
+                    <value>Contact</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>filterName</name>
-                    <value>All_Recipes_Accounts</value>
+                    <value>All_Recipes_Contacts</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideActionBar</name>
@@ -37,14 +37,20 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>dispatchRefreshEvent</componentName>
-                <identifier>c_dispatchRefreshEvent</identifier>
+                <componentName>dispatchContactRefreshEvent</componentName>
+                <identifier>c_dispatchContactRefreshEvent</identifier>
             </componentInstance>
         </itemInstances>
         <name>region2</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>contactRefreshView</componentName>
+                <identifier>c_contactRefreshView</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>
