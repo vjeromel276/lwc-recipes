@@ -20,4 +20,6 @@ export default class ApexWireMethodWithParams extends LightningElement {
             this.searchKey = searchKey;
         }, DELAY);
     }
+
+    
 }
